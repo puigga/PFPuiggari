@@ -1,0 +1,737 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap");
+#guitarra1 {
+  grid-area: g1;
+}
+
+#guitarra2 {
+  grid-area: g2;
+}
+
+#guitarra3 {
+  grid-area: g3;
+}
+
+#addCart1 {
+  grid-area: c1;
+}
+
+#addCart2 {
+  grid-area: c2;
+}
+
+#addCart3 {
+  grid-area: c3;
+}
+
+#acc1 {
+  grid-area: a1;
+}
+
+#acc2 {
+  grid-area: a2;
+}
+
+#acc3 {
+  grid-area: a3;
+}
+
+#acc4 {
+  grid-area: a4;
+}
+
+#acc5 {
+  grid-area: a5;
+}
+
+#acc6 {
+  grid-area: a6;
+}
+
+#addCart4 {
+  grid-area: c4;
+}
+
+#addCart5 {
+  grid-area: c5;
+}
+
+#addCart6 {
+  grid-area: c6;
+}
+
+#addCart7 {
+  grid-area: c7;
+}
+
+#addCart8 {
+  grid-area: c8;
+}
+
+#addCart9 {
+  grid-area: c9;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+nav {
+  background-image: linear-gradient(#473BF0, #5ABCB9);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+}
+
+#contenedorNavLogo {
+  padding: 0.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+#navLogo {
+  height: 80px;
+}
+
+#listaVinculos {
+  list-style: none;
+  min-width: 30%;
+  margin-right: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.elementoLista {
+  flex: 1 1 auto;
+  text-align: center;
+  padding: 5px 10px;
+}
+
+.bordeIzquierdo {
+  border-left: 1px solid white;
+}
+
+.vinculoNav {
+  font-weight: 400;
+  text-decoration: none;
+  font-size: 1.5rem;
+}
+.vinculoNav:hover {
+  text-decoration: underline;
+  color: white;
+}
+
+.nav-link {
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar-toggler {
+  padding: 0;
+  width: 60px;
+  border: 0;
+}
+
+#botonHamb {
+  width: 100%;
+  padding: 0;
+  fill: white;
+}
+
+#divBanner {
+  background-image: url(../img/banner-watermark-transformed.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+#divContenidoBanner {
+  width: 35%;
+  margin-left: 40px;
+}
+
+h1.contenidoBanner {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 3.5rem;
+  color: white;
+}
+
+p.contenidoBanner {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  width: 90%;
+  font-size: 1.7rem;
+  margin: 25px 0;
+  color: white;
+}
+
+a.contenidoBanner {
+  font-family: "Montserrat", sans-serif;
+  text-decoration: none;
+  font-weight: 500;
+  display: inline-block;
+  font-size: 2.7rem;
+  color: white;
+  border: 2px solid white;
+  border-radius: 16px;
+  padding: 10px 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+a.contenidoBanner:hover {
+  color: #5ABCB9;
+  border-color: #5ABCB9;
+  transform: scale(1.1);
+}
+
+#principal {
+  background-color: #2F2E2A;
+}
+
+#features {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 135px 0;
+  margin: 0 80px;
+  border-bottom: 2px solid #473BF0;
+}
+
+.divFeature {
+  min-width: 300px;
+  width: 20%;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+  background-image: linear-gradient(#5ABCB9, #473BF0);
+  padding: 20px;
+  margin: 10px;
+  border-radius: 30px;
+}
+
+.divIconoFeature {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.iconoFeature {
+  width: 100px;
+  fill: white;
+}
+
+.tituloFeature {
+  margin-top: 20px;
+  font-size: 2.7rem;
+  text-align: center;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.descripcionFeature {
+  font-size: 1.7rem;
+  text-align: center;
+  margin-top: 10px;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+#accesorios {
+  width: 100%;
+  padding: 135px 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+#contAccesorios {
+  width: 80%;
+  padding: 40px 0;
+  border-radius: 20px;
+  background-image: linear-gradient(#473BF0, #5ABCB9);
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+}
+
+#descripcionAccesorios {
+  width: 100%;
+  padding-left: 65px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+#descripcionAccesorios h2 {
+  font-size: 2.7rem;
+  margin-bottom: 30px;
+  width: 100%;
+  margin-top: 10px;
+  font-family: "Montserrat", sans-serif;
+}
+#descripcionAccesorios p {
+  font-size: 1.7rem;
+  font-family: "Montserrat", sans-serif;
+}
+
+#descripcionAccesorios1 {
+  margin-bottom: 10px;
+}
+
+#divImagenAccesorios {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+}
+
+#imagenAccesorios {
+  width: 40%;
+  background-blend-mode: darken;
+}
+
+@media (max-width: 992px) {
+  #divBanner {
+    height: 90vh;
+    background-image: url(../img/banner-mobile.avif);
+    background-position: center;
+  }
+  nav {
+    display: grid;
+    grid-template-columns: 70vw;
+    grid-template-rows: auto auto;
+    justify-items: center;
+    justify-content: center;
+  }
+  #listaVinculos {
+    margin: 10px;
+  }
+}
+@media (max-width: 1465px) {
+  #contAccesorios {
+    grid-template-columns: 1fr;
+    grid-template-rows: minmax(max-content, 20vh) max-content;
+  }
+  #divImagenAccesorios {
+    width: 100%;
+    padding: 10px 0;
+    margin: 10px 0;
+    justify-content: center;
+  }
+  #imagenAccesorios {
+    width: 250px;
+  }
+}
+@media (max-width: 800px) {
+  #divBanner {
+    background-image: none;
+    background-color: black;
+    align-items: center;
+  }
+  #divContenidoBanner {
+    width: 80%;
+  }
+  .divFeature {
+    width: 60%;
+  }
+}
+@media (max-width: 550px) {
+  #navLogo {
+    height: 50px;
+  }
+}
+footer {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  align-items: center;
+  padding: 10px 0;
+  background-color: #5ABCB9;
+}
+
+.iconoRedes {
+  color: black;
+  display: inline-block;
+  width: 60px;
+}
+
+#sectionProductos {
+  margin: 70px 400px;
+  display: grid;
+  grid-template-rows: repeat(3, auto auto);
+  grid-template-columns: repeat(3, minmax(300px, 1fr));
+  column-gap: 10%;
+  row-gap: 40px;
+  grid-template-areas: "g1 g2 g3" "c1 c2 c3" "a1 a2 a3" "c4 c5 c6" "a4 a5 a6" "c7 c8 c9";
+  justify-items: center;
+  justify-content: center;
+}
+
+.imagenGuitarra {
+  height: 300px;
+}
+
+.contenedorImagenAccesorio {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.contenedorAddCart {
+  border: 2px solid black;
+  width: max-content;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  height: 100%;
+}
+
+.tituloGuitarra {
+  font-size: 1.8rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 5px;
+}
+
+.botonCart {
+  display: flex;
+  align-items: center;
+  height: min-content;
+  width: 40px;
+  background-color: transparent;
+  border-width: 0;
+  font-family: inherit;
+  font-size: inherit;
+  font-style: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+  padding: 5px;
+}
+
+@media (max-width: 1000px) {
+  #sectionProductos {
+    grid-template-columns: repeat(2, minmax(300px, 1fr));
+    grid-template-rows: repeat(3, auto auto);
+    grid-template-areas: "g1 g2" "c1 c2" "g3 a1" "c3 c4" "a2 a3" "c5 c6" "a4 a5" "c7 c8" "a6 ." "c9 .";
+    column-gap: 50px;
+  }
+}
+@media (max-width: 730px) {
+  #sectionProductos {
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(9, auto auto);
+    grid-template-areas: "g1" "c1" "g2" "c2" "g3" "c3" "a1" "c4" "a2" "c5" "a3" "c6" "a4" "c7" "a5" "c8" "a6" "c9";
+    margin: 20px 80px;
+  }
+}
+#loginMain {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  margin: 0 10px;
+}
+
+#loginSection {
+  height: 65vh;
+  width: 50%;
+  min-width: 440px;
+  padding: 50px 0;
+  margin: 100px 0;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 5px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+#userLogo {
+  width: 140px;
+  margin-bottom: 0;
+}
+
+#loginTitulo {
+  font-size: 3.5rem;
+  font-family: "Montserrat", sans-serif;
+  margin-bottom: 50px;
+}
+
+#loginForm {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
+
+.inputLogin {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  align-items: center;
+  margin: 10px 0;
+  padding: 1px 10px;
+  border-bottom: 1px solid black;
+}
+
+.loginBox {
+  width: min-content;
+  height: 30px;
+  border: 0;
+}
+.loginBox::placeholder {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+}
+.loginBox:focus {
+  outline: none;
+}
+
+.labelIcon {
+  height: 25px;
+  margin-right: 10px;
+}
+
+#botonAcceder {
+  background: 0;
+  border: 0;
+  width: 60px;
+  margin: 30px;
+}
+
+#iconoAcceder {
+  width: 100%;
+  height: 100%;
+}
+
+#contactanosMain {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-around;
+  height: 90vh;
+  padding: 80px 0;
+}
+
+#formSection {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.tituloContact {
+  font-size: 2.7rem;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+  width: 100%;
+}
+.tituloContactMapa {
+  margin: 10px 0;
+}
+
+#contactForm {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+#contactForm div label {
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.7rem;
+  width: 80%;
+}
+#contactForm div input::placeholder {
+  font-family: "Montserrat", sans-serif;
+}
+
+.divInputTexto {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin: 10px 0;
+}
+
+.inputTexto {
+  width: 80%;
+  height: 30px;
+}
+
+#divBotonesContacto {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.botonContactoCancelar, .botonContactoEnviar {
+  width: 25%;
+  height: 40px;
+  border: none;
+  border-radius: 10px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+}
+
+.botonContactoEnviar {
+  background-color: rgb(33, 172, 33);
+  font-weight: 500;
+}
+
+#mapSection {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  align-items: center;
+  box-shadow: 5px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+}
+
+#mapa {
+  width: 400px;
+  height: 300px;
+}
+
+.contactanosSection {
+  margin: 50px 0;
+  padding: 20px;
+  box-shadow: 5px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 10px;
+  width: 40%;
+}
+
+.flexEnd {
+  display: flex;
+  align-items: flex-end;
+}
+
+.width50 {
+  width: 50%;
+}
+
+.width100 {
+  width: 100%;
+}
+
+@media (max-width: 1140px) {
+  #contactanosMain {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+    height: auto;
+    padding: 0;
+  }
+  .contactanosSection {
+    width: 80vw;
+  }
+  .inputTexto {
+    width: 95%;
+  }
+  .flexEnd {
+    display: flex;
+    align-items: flex-start;
+  }
+}
+@media (max-width: 600px) {
+  #mapa {
+    width: 100%;
+  }
+  .contactanosSection {
+    width: 80vw;
+  }
+}
+@media (max-width: 502px) {
+  #contactForm {
+    flex-direction: column;
+  }
+  .divInputTexto {
+    width: 100%;
+  }
+}
+#promosSection {
+  margin: 30px 0;
+}
+
+.contenedorPromo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  width: 100%;
+}
+
+#divPromoPuas, #divPromoPrincipiante {
+  width: 40%;
+  min-width: 240px;
+  border: 2px solid black;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.divImagenesPromo {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.divImagenPromo {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  justify-content: center;
+}
+
+.imagenGuitarraPromo {
+  height: 500px;
+}
+
+.divTextoPromo {
+  background-color: #5ABCB9;
+  margin-top: 10px;
+}
+
+.textoPromo {
+  text-align: center;
+  font-size: 1.7rem;
+  margin: 10px 0;
+}
+
+@media (max-width: 897px) {
+  .divImagenPromo {
+    margin: 10px 0;
+  }
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,27 +1,26 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400&display=swap');
+@import "_vars";
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&display=swap');
+@import "_gridAreas";
+@import "_mixins.scss";
 
 *{
     box-sizing: border-box;
-    font-family: 'Montserrat', sans-serif;
+    font-family: $mainFont;
 }
 
 html{
     font-size: 62.5%;
 }
 
-a{
-    color: inherit;
-    text-decoration: none;
+nav{
+    background-image: linear-gradient($mainColor, $secColor);
+    @include flex(row, nowrap);
+    justify-content: space-between;
 }
-
-/* 
-
-/* nav */
 
 #contenedorNavLogo{
     padding: 0.5rem;
-    display: flex;
+    @include flex(row, nowrap);
     align-items: center;
 }
 
@@ -33,8 +32,7 @@ a{
     list-style: none;
     min-width: 30%;
     margin-right: 1.5rem;
-    display: flex;
-    flex-flow: row nowrap;
+    @include flex(row, nowrap);
     justify-content: space-between;
     align-items: center;
 }
@@ -52,24 +50,16 @@ a{
 .vinculoNav{
     font-weight: 400;
     text-decoration: none;
-    font-size: 1.5rem;
-    color: white;
+    font-size: $fontSm;
+    &:hover{
+        text-decoration: underline;
+        color: $lightColor;
+    }
 }
 
-nav{
-    background-image: linear-gradient(#473BF0, #5ABCB9);
-    background-color: #473BF0;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: space-between;
-}
-
-.nav-item .nav-link{
-    color: white;
-}
-
-.vinculoNav:hover{
-    text-decoration: underline;
+.nav-link{
+    color: $lightColor;
+    font-family: $mainFont;
 }
 
 .navbar-toggler{
@@ -84,18 +74,13 @@ nav{
     fill: white;
 }
 
-/* ends nav */
-
-/* header */
-
 #divBanner{
     background-image: url(../img/banner-watermark-transformed.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
     height: 500px;
-    display: flex;
-    flex-flow: column nowrap;
+    @include flex(column, nowrap);
     justify-content: center;
 }
 
@@ -105,49 +90,46 @@ nav{
 }
 
 h1.contenidoBanner{
+    font-family: $mainFont;
     font-weight: 500;
-    font-size: 3.5rem;
-    color: white;
+    font-size: $fontXl;
+    color: $lightColor;
 }
 
 p.contenidoBanner{
+    font-family: $mainFont;
     font-weight: 400;
     width: 90%;
-    font-size: 1.9rem;
+    font-size: $fontMd;
     margin: 25px 0;
-    color: white;
+    color: $lightColor;
 }
 
 a.contenidoBanner{
+    font-family: $mainFont;
     text-decoration: none;
     font-weight: 500;
     display: inline-block;
     font-size: 2.7rem;
-    color: white;
-    border: 2px solid white;
+    color: $lightColor;
+    border: 2px solid $lightColor;
     border-radius: 16px;
     padding: 10px 10px;
     text-align: center;
     margin-top: 10px;
+    &:hover{
+        color: $secColor;
+        border-color: $secColor;
+        transform: scale(1.1);
+    }
 }
-
-a.contenidoBanner:hover{
-    color: #5ABCB9;
-    border-color: #5ABCB9;
-    transform: scale(1.1);
-}
-
-/* ends header */
-
-/* index main */
 
 #principal{
     background-color: #2F2E2A;
 }
 
 #features{
-    display: flex;
-    flex-flow: row wrap;
+    @include flex(row, wrap);
     justify-content: space-around;
     padding: 135px 0;
     margin: 0 80px;
@@ -157,48 +139,44 @@ a.contenidoBanner:hover{
 .divFeature{
     min-width: 300px;
     width: 20%;
-    display: flex;
-    flex-direction: column;
+    @include flex(column, nowrap);
     align-items: center;
-    background-image: linear-gradient(#5ABCB9, #473BF0);
+    background-image: linear-gradient($secColor, $mainColor);
     padding: 20px;
     margin: 10px;
     border-radius: 30px;
 }
 
 .divIconoFeature{
-    display: flex;
-    flex-flow: row nowrap;
+    @include flex(row, nowrap);
     justify-content: center;
 }
 
 .iconoFeature{
     width: 100px;
-    fill: white;
+    fill: $lightColor;
 }
 
 .tituloFeature{
     margin-top: 20px;
-    font-size: 2rem;
+    font-size: $fontLg;
     text-align: center;
-    color: white;
+    color: $lightColor;
+    font-family: $mainFont;
 }
 
 .descripcionFeature{
-    font-size: 1.6rem;
+    font-size: $fontMd;
     text-align: center;
     margin-top: 10px;
-    color: white;
+    color: $lightColor;
+    font-family: $mainFont;
 }
-
-
 
 #accesorios{
     width: 100%;
     padding: 135px 0;
-    display: flex;
-    flex-flow: row nowrap;
-    flex-direction: row; 
+    @include flex(row, nowrap);
     justify-content: center;
 }
 
@@ -206,7 +184,7 @@ a.contenidoBanner:hover{
     width: 80%;
     padding: 40px 0;
     border-radius: 20px;
-    background-image: linear-gradient(#473BF0, #5ABCB9);
+    background-image: linear-gradient($mainColor, $secColor);
     display: grid;
     grid-template-columns: 1.1fr 1fr; 
 }
@@ -214,29 +192,27 @@ a.contenidoBanner:hover{
 #descripcionAccesorios{
     width: 100%;
     padding-left: 65px;
-    display: flex;
-    flex-direction: column;
+    @include flex(column, nowrap);
     justify-content: center;
-}
-
-    #descripcionAccesorios h2{
-        font-size: 2.5rem;
+    h2{
+        font-size: $fontLg;
         margin-bottom: 30px;
         width: 100%;
         margin-top: 10px;
+        font-family: $mainFont;
     }
-
-    #descripcionAccesorios p{
-        font-size: 1.6rem;
+    p{
+        font-size: $fontMd;
+        font-family: $mainFont;
     }
+}
 
 #descripcionAccesorios1{
     margin-bottom: 10px;
 }
 
 #divImagenAccesorios{
-    display: flex;
-    flex-direction: row;
+    @include flex(row, nowrap);
     justify-content: center;
     align-items: center;
 }
@@ -302,9 +278,19 @@ a.contenidoBanner:hover{
     }
 }
 
-/* termina index main */
+footer{
+    @include flex(row, nowrap);
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px 0;
+    background-color: #5ABCB9;
+}
 
-/* productos */
+.iconoRedes{
+    color: black;
+    display: inline-block;
+    width: 60px;
+}
 
 #sectionProductos{
     margin: 70px 400px;
@@ -329,16 +315,14 @@ a.contenidoBanner:hover{
 }
 
 .contenedorImagenAccesorio{
-    display: flex;
+    @include flex(row, nowrap);
     align-items: center;
 }
 
 .contenedorAddCart{
     border: 2px solid black;
-    display: flex;
     width: max-content;
-    display: flex;
-    flex-flow: row nowrap;
+    @include flex(row, nowrap);
     align-items: center;
     justify-content: space-between;
     width: 100%;
@@ -414,24 +398,22 @@ a.contenidoBanner:hover{
     }
 }
 
-/* ends productos */
-
-/* login */
-
 #loginMain{
-    display: flex;
+    @include flex(row, nowrap);
     justify-content: center;
     align-items: center;
+    margin: 0 10px;
 }
 
 #loginSection{
     height: 65vh;
     width: 50%;
+    min-width: 440px;
     padding: 50px 0;
     margin: 100px 0;
     border-radius: 10px;
-    display: flex;
-    flex-flow: column nowrap;
+    @include flex(column, nowrap);
+    justify-content: center;
     align-items: center;
     box-shadow: 5px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
@@ -442,19 +424,18 @@ a.contenidoBanner:hover{
 }
 
 #loginTitulo{
-    font-size: 3.7rem;
+    font-size: $fontXl;
+    font-family: $mainFont;
     margin-bottom: 50px;
 }
 
 #loginForm{
-    display: flex;
-    flex-flow: column nowrap;
+    @include flex(column, nowrap);
     align-items: center;
 }
 
 .inputLogin{
-    display: flex;
-    flex-flow: row nowrap;
+    @include flex(row, nowrap);
     align-items: center;
     margin: 10px 0;
     padding: 1px 10px;
@@ -465,15 +446,13 @@ a.contenidoBanner:hover{
     width: min-content;
     height: 30px;
     border: 0;
-}
-
-.loginBox::placeholder{
-    font-family: 'Montserrat', sans-serif;
-    font-size: 1.5rem;
-}
-
-.loginBox:focus{
-    outline: none;
+    &::placeholder{
+        font-family: $mainFont;
+        font-size: 1.5rem;
+    }
+    &:focus{
+        outline: none;
+    }
 }
 
 .labelIcon{
@@ -484,7 +463,7 @@ a.contenidoBanner:hover{
 #botonAcceder{
     background: 0;
     border: 0;
-    width: 50px;
+    width: 60px;
     margin: 30px;
 }
 
@@ -493,51 +472,47 @@ a.contenidoBanner:hover{
     height: 100%;
 }
 
-/* ends login */
-
-/* contactanos */
-
 #contactanosMain{
-    height: 100vh;
-    display: flex;
-    flex-flow: row nowrap;
+    @include flex(row, nowrap);
     justify-content: space-around;
-}
-
-#mapSection, #formSection{
-    width: 40%;
-    height: 80vh;
+    height: 90vh;
+    padding: 80px 0;
 }
 
 #formSection{
-    display: flex;
-    flex-flow: column nowrap;
+    @include flex(column, nowrap);
+    justify-content: center;
 }
 
 .tituloContact{
-    font-size: 3rem;
+    font-size: $fontLg;
+    font-family: $mainFont;
+    text-align: left;
+    width: 100%;
+    &Mapa{
+        margin: 10px 0;
+    }
 }
 
 #contactForm{
-    display: flex;
-    flex-flow: row wrap;
+    @include flex(row, wrap);
     justify-content: space-between;
+    div{
+        label{
+            font-family: $mainFont;
+            font-size: $fontMd;
+            width: 80%;
+        }
+        input::placeholder{
+            font-family: $mainFont;
+        }
+    }
 }
 
 .divInputTexto{
-    display: flex;
-    flex-flow: column nowrap;
+    @include flex(column, nowrap);
     margin: 10px 0;
 }
-
-        #contactForm div label{
-            font-size: 2rem;
-            width: 80%;
-        }
-
-        #contactForm div input::placeholder{
-            font-family: 'Montserrat', sans-serif;
-        }
 
 .inputTexto{
     width: 80%;
@@ -545,23 +520,36 @@ a.contenidoBanner:hover{
 }
 
 #divBotonesContacto{
-    display: flex;
-    flex-flow: row wrap;
+    @include flex(row, wrap);
     justify-content: space-between;
 }
 
-.botonContacto{
+.botonContactoCancelar{
     width: 25%;
     height: 40px;
+    border: none;
+    border-radius: 10px;
+    font-family: $mainFont;
+    font-size: $fontSm;
+}
+
+.botonContactoEnviar{
+    @extend .botonContactoCancelar;
+    background-color: rgb(33, 172, 33);
+    font-weight: 500;
 }
 
 #mapSection{
-    display: flex;
-    flex-flow: column nowrap;
-    justify-content: center;
+    @include flex(column, nowrap);
+    justify-content: space-evenly;
     align-items: center;
     box-shadow: 5px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
+}
+
+#mapa{
+    width: 400px;
+    height: 300px;
 }
 
 .contactanosSection{
@@ -569,6 +557,7 @@ a.contenidoBanner:hover{
     padding: 20px;
     box-shadow: 5px 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     border-radius: 10px;
+    width: 40%
 }
 
 .flexEnd{
@@ -584,104 +573,96 @@ a.contenidoBanner:hover{
     width: 100%;
 }
 
-/* ends contactanos */
+@media (max-width: 1140px){
+    #contactanosMain{
+        @include flex(column, nowrap);
+        align-items: center;
+        height: auto;
+        padding: 0;
+    }
 
-/* footer */
+    .contactanosSection{
+        width: 80vw;
+    }
 
-footer{
-    display: flex;
-    flex-flow: row nowrap;
+    .inputTexto{
+        width: 95%;
+    }
+
+    .flexEnd{
+        display: flex;
+        align-items: flex-start;
+    }
+}
+
+@media (max-width: 600px){
+
+    #mapa{
+        width: 100%;
+    }
+
+    .contactanosSection{
+        width: 80vw;
+    }
+}
+
+@media (max-width: 502px){
+    #contactForm{
+        flex-direction: column;
+    }
+    .divInputTexto{
+        width: 100%;
+    }
+}
+
+#promosSection{
+    margin: 30px 0;
+}
+
+.contenedorPromo{
+    @include flex(row, nowrap);
+    justify-content: center;
+    width: 100%;
+}
+
+#divPromoPuas{
+    width: 40%;
+    min-width: 240px;
+    border: 2px solid black;
+    @include flex(column, nowrap)
+}
+
+.divImagenesPromo{
+    @include flex(row, wrap);
     justify-content: space-around;
-    align-items: center;
-    padding: 10px 0;
-    background-color: #5ABCB9;
 }
 
-.iconoRedes{
-    display: inline-block;
-    width: 60px;
+.divImagenPromo{
+    @include flex(column, nowrap);
+    justify-content: center;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-#guitarra1{
-    grid-area: g1;
+.imagenGuitarraPromo{
+    height: 500px;
 }
 
-#guitarra2{
-    grid-area: g2;
+.divTextoPromo{
+    background-color: $secColor;
+    margin-top: 10px;
 }
 
-#guitarra3{
-    grid-area: g3;
+.textoPromo{
+    text-align: center;
+    font-size: $fontMd;
+    margin: 10px 0;
 }
 
-#addCart1{
-    grid-area: c1;
+#divPromoPrincipiante{
+    @extend #divPromoPuas;
 }
 
-#addCart2{
-    grid-area: c2;
-}
-
-#addCart3{
-    grid-area: c3;
-}
-
-#acc1{
-    grid-area: a1;
-}
-
-#acc2{
-    grid-area: a2;
-}
-
-#acc3{
-    grid-area: a3;
-}
-
-#acc4{
-    grid-area: a4;
-}
-
-#acc5{
-    grid-area: a5;
-}
-
-#acc6{
-    grid-area: a6;
-}
-
-#addCart4{
-    grid-area: c4;
-}
-
-#addCart5{
-    grid-area: c5;
-}
-
-#addCart6{
-    grid-area: c6;
-}
-
-#addCart7{
-    grid-area: c7;
-}
-
-#addCart8{
-    grid-area: c8;
-}
-
-#addCart9{
-    grid-area: c9;
+@media (max-width: 897px){
+    .divImagenPromo{
+        margin: 10px 0;
+    }
 }
