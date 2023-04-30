@@ -1,4 +1,4 @@
-Pre-entrega 2 para el curso de coderhouse
+Pre-entrega 3 para el curso de coderhouse
 
 Para instalar dependencias:
 npm install
