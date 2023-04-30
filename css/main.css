@@ -149,7 +149,7 @@ nav {
 }
 
 #divBanner {
-  background-image: url(../img/banner-watermark-transformed.jpeg);
+  background-image: url(../img/banner-watermark-transformed.webp);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: right;
@@ -198,6 +198,7 @@ a.contenidoBanner:hover {
   color: #5ABCB9;
   border-color: #5ABCB9;
   transform: scale(1.1);
+  transition: all 0.1s;
 }
 
 #principal {
@@ -717,9 +718,25 @@ footer {
   height: 500px;
 }
 
+@keyframes descuento {
+  0% {
+    background-color: #5ABCB9;
+  }
+  50% {
+    background-color: red;
+  }
+  100% {
+    background-color: #5ABCB9;
+  }
+}
 .divTextoPromo {
   background-color: #5ABCB9;
+  font-weight: bold;
   margin-top: 10px;
+  animation-name: descuento;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
 }
 
 .textoPromo {

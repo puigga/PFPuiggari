@@ -3,3 +3,10 @@
     flex-direction: $direction;
     flex-wrap: $wrap;
 }
+
+@mixin descuentoLoop{
+    animation-name: descuento;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-out;
+}

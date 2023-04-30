@@ -75,7 +75,7 @@ nav{
 }
 
 #divBanner{
-    background-image: url(../img/banner-watermark-transformed.jpeg);
+    background-image: url(../img/banner-watermark-transformed.webp);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: right;
@@ -121,6 +121,7 @@ a.contenidoBanner{
         color: $secColor;
         border-color: $secColor;
         transform: scale(1.1);
+        transition: all 0.1s;
     }
 }
 
@@ -646,9 +647,17 @@ footer{
     height: 500px;
 }
 
+@keyframes descuento{
+    0%{background-color: $secColor}
+    50%{background-color: red}
+    100%{background-color: $secColor}
+}
+
 .divTextoPromo{
     background-color: $secColor;
+    font-weight: bold;
     margin-top: 10px;
+    @include descuentoLoop;
 }
 
 .textoPromo{
