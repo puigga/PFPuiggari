@@ -276,7 +276,7 @@ a.contenidoBanner:hover {
 
 #descripcionAccesorios {
   width: 100%;
-  padding-left: 65px;
+  padding: 0 65px;
   display: flex;
   flex-direction: column;
   flex-wrap: nowrap;
@@ -679,6 +679,13 @@ footer {
     width: 100%;
   }
 }
+.titulosPromos {
+  text-align: center;
+  width: 100%;
+  margin: 20px 0;
+  font-size: 3.5rem;
+}
+
 #promosSection {
   margin: 30px 0;
 }
@@ -749,6 +756,9 @@ footer {
   .divImagenPromo {
     margin: 10px 0;
   }
+}
+textarea {
+  resize: none;
 }
 
 /*# sourceMappingURL=main.css.map */
